@@ -1,0 +1,8 @@
+services:
+  funding-arbitrage:
+    build: .
+    container_name: hyperliquid-funding-arbitrage
+    environment:
+      - MIN_NET_APR_THRESHOLD=12.0
+      - SIMULATION_MODE=True
+    restart: unless-stopped
